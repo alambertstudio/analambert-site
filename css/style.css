@@ -235,3 +235,6 @@ nav.scrolled{background:rgba(250,250,248,.82);backdrop-filter:saturate(140%) blu
   .hero h1 em{background-size:100% 34%;transition:none}
   .brandtile{animation:none}
 }
+
+/* case study subheads */
+.cs-body h3{font-family:var(--disp);font-weight:750;font-stretch:108%;font-size:20px;letter-spacing:-.01em;margin:34px 0 10px}
