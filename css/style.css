@@ -137,3 +137,101 @@ footer a:hover{color:var(--blue)}
 .next .k{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mid)}
 .next .t{font-family:var(--disp);font-weight:800;font-size:clamp(20px,3vw,30px);margin-top:6px}
 .next:hover .t{color:var(--mid)}
+
+/* ============================================================
+   Motion — added July 2026
+   All effects collapse under prefers-reduced-motion.
+   ============================================================ */
+
+body{transition:background-color .6s ease}
+
+/* nav gains weight after scroll */
+nav{transition:box-shadow .25s ease,background-color .25s ease}
+nav.scrolled{background:rgba(250,250,248,.85);backdrop-filter:saturate(160%) blur(10px);box-shadow:0 1px 0 var(--rule)}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* hero headline word stagger */
+h1 .w{display:inline-block;opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.22,.61,.36,1)}
+h1.lit .w{opacity:1;transform:none}
+/* marker sweep behind the blue phrase */
+h1 em{position:relative;display:inline-block}
+h1 em::before{content:"";position:absolute;left:-.06em;right:-.06em;top:.12em;bottom:.12em;background:var(--tint);transform:scaleX(0);transform-origin:left center;z-index:-1;border-radius:3px;transition:transform .75s cubic-bezier(.22,.61,.36,1) .6s}
+h1.lit em::before{transform:scaleX(1)}
+
+/* card image zoom on hover */
+.card-thumb{transition:transform .45s cubic-bezier(.22,.61,.36,1)}
+.card{overflow:hidden}
+.card:hover .card-thumb,.card:focus-visible .card-thumb{transform:scale(1.03)}
+
+/* flagship brand tiles drift */
+@keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.brandtile{animation:drift 5s ease-in-out infinite}
+.brandtile:nth-child(2){animation-duration:6.2s;animation-delay:-1.4s}
+.brandtile:nth-child(3){animation-duration:4.6s;animation-delay:-2.6s}
+.brandtile:nth-child(4){animation-duration:5.8s;animation-delay:-.7s}
+.brandtile:nth-child(5){animation-duration:6.6s;animation-delay:-3.1s}
+.brandtile:nth-child(6){animation-duration:5.2s;animation-delay:-1.9s}
+.flag-vis:hover .brandtile{animation-play-state:paused}
+
+/* bigger next-case-study arrow */
+.next .arrow{font-family:var(--mono);font-size:38px;line-height:1;color:var(--mid);transition:transform .3s cubic-bezier(.22,.61,.36,1)}
+.next:hover .arrow{transform:translateX(8px)}
+
+@media (prefers-reduced-motion:reduce){
+  .reveal,.reveal.in{opacity:1;transform:none;transition:none}
+  h1 .w{opacity:1;transform:none}
+  h1 em::before{transform:scaleX(1);transition:none}
+  .brandtile{animation:none}
+  body{transition:none}
+  .card:hover .card-thumb{transform:none}
+}
+
+/* ============================================================
+   Motion layer
+   ============================================================ */
+body{background:var(--page-bg,var(--paper));transition:background-color .6s ease}
+.about{background:transparent}
+
+/* reveals */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* hero entrance */
+@keyframes heroIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.hero-in{opacity:0;animation:heroIn .8s cubic-bezier(.2,.7,.3,1) forwards}
+.hero h1 em{background-image:linear-gradient(var(--tint),var(--tint));background-repeat:no-repeat;background-position:0 88%;background-size:0 34%;transition:background-size .7s cubic-bezier(.4,0,.2,1)}
+.hero h1 em.swept{background-size:100% 34%}
+
+/* nav on scroll */
+nav{transition:background-color .3s ease,box-shadow .3s ease}
+nav.scrolled{background:rgba(250,250,248,.82);backdrop-filter:saturate(140%) blur(10px);-webkit-backdrop-filter:saturate(140%) blur(10px);box-shadow:0 1px 0 var(--rule)}
+
+/* card image zoom */
+.card{will-change:transform}
+.card-thumb{transition:transform .45s cubic-bezier(.2,.7,.3,1)}
+.card:hover .card-thumb{transform:scale(1.03)}
+
+/* floating brand tiles */
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.brandtile{animation:floatY 5s ease-in-out infinite}
+.brandtile:nth-child(2){animation-duration:6s;animation-delay:-1.4s}
+.brandtile:nth-child(3){animation-duration:4.6s;animation-delay:-2.2s}
+.brandtile:nth-child(4){animation-duration:5.6s;animation-delay:-.7s}
+.brandtile:nth-child(5){animation-duration:6.4s;animation-delay:-3.1s}
+.brandtile:nth-child(6){animation-duration:5.2s;animation-delay:-1.9s}
+.flag-vis:hover .brandtile{animation-play-state:paused}
+
+/* bigger next-case arrow */
+.next .wrap>.k:last-child{font-family:var(--body);font-size:44px;line-height:1;color:#fff;transition:transform .25s ease}
+.next:hover .wrap>.k:last-child{transform:translateX(8px)}
+
+@media (prefers-reduced-motion:reduce){
+  body,.reveal,.card-thumb,.next .wrap>.k:last-child{transition:none}
+  .reveal{opacity:1;transform:none}
+  .hero-in{opacity:1;animation:none}
+  .hero h1 em{background-size:100% 34%;transition:none}
+  .brandtile{animation:none}
+}
