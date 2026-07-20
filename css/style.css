@@ -7,6 +7,7 @@
   --ink:#0B0B14;
   --blue:#1A1AE6;
   --blue-deep:#10109E;
+  --navy:#0A0A5C;
   --tint:#E3F6F2;
   --mid:#7FDFCC;
   --paper:#FAFAF8;
@@ -52,7 +53,7 @@ h1 em{font-style:normal;color:var(--blue)}
 @media(max-width:900px){.tokens{display:none}}
 
 /* ---------- scale strip ---------- */
-.strip{background:var(--ink);color:#fff}
+.strip{background:var(--navy);color:#fff}
 .strip-in{display:grid;grid-template-columns:repeat(4,1fr)}
 .stat{padding:26px 24px;border-left:1px solid rgba(255,255,255,.14)}
 .stat:first-child{border-left:none;padding-left:0}
@@ -89,7 +90,7 @@ h3{font-family:var(--disp);font-weight:750;font-stretch:108%;font-size:19.5px;li
 .flag h3{color:#fff;font-size:clamp(22px,3vw,30px);max-width:20ch}
 .flag p{margin-top:12px;font-size:15.5px;color:#E6FAF5;max-width:46ch}
 .flag .go{color:#fff}
-.flag-vis{background:var(--blue-deep);padding:36px;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+.flag-vis{background:var(--navy);padding:36px;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
 .brandtile{width:74px;height:74px;border-radius:12px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-weight:850;font-size:13px;color:#fff}
 .brandtile.lit{background:#fff;color:var(--blue)}
 
@@ -131,7 +132,7 @@ footer a:hover{color:var(--blue)}
 .cs-fig{margin:36px 0}
 .cs-fig figcaption{font-family:var(--mono);font-size:12px;color:#6a6a74;margin-top:10px}
 .cs-fig.full{max-width:1200px;margin-left:auto;margin-right:auto}
-.next{background:var(--ink);color:#fff;text-decoration:none;display:block}
+.next{background:var(--navy);color:#fff;text-decoration:none;display:block}
 .next .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:44px;padding-bottom:44px;gap:16px;flex-wrap:wrap}
 .next .k{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mid)}
 .next .t{font-family:var(--disp);font-weight:800;font-size:clamp(20px,3vw,30px);margin-top:6px}
