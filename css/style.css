@@ -9,6 +9,7 @@
   --blue-deep:#10109E;
   --navy:#0A0A5C;
   --tint:#E3F6F2;
+  --tint-deep:#BFEEE1;
   --mid:#7FDFCC;
   --paper:#FAFAF8;
   --rule:rgba(11,11,20,.14);
@@ -34,6 +35,24 @@ nav{position:sticky;top:0;background:var(--paper);border-bottom:1px solid var(--
 .nav-links a:hover,.nav-links a:focus-visible{color:var(--blue)}
 .nav-cta{font-family:var(--mono);font-size:12px;border:1px solid var(--ink);padding:8px 14px;border-radius:100px}
 .nav-cta:hover{background:var(--ink);color:#fff!important}
+
+/* hamburger toggle: hidden on desktop */
+.nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:34px;height:34px;background:none;border:none;cursor:pointer;padding:0}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:transform .25s ease,opacity .2s ease}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+@media(max-width:640px){
+  .nav-toggle{display:flex}
+  .nav-links{position:fixed;top:64px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--rule);
+    flex-direction:column;align-items:stretch;gap:0;padding:8px 24px 20px;
+    max-height:0;overflow:hidden;opacity:0;transition:max-height .3s ease,opacity .25s ease;}
+  .nav-links.open{max-height:260px;opacity:1}
+  .nav-links a{padding:14px 0;border-bottom:1px solid var(--rule);font-size:16px}
+  .nav-links a:last-child{border-bottom:none}
+  .nav-cta{margin-top:12px;text-align:center;padding:12px 14px}
+}
 
 /* ---------- hero ---------- */
 header.site-hero{border-bottom:1px solid var(--rule);position:relative;overflow:hidden}
@@ -139,60 +158,10 @@ footer a:hover{color:var(--blue)}
 .next:hover .t{color:var(--mid)}
 
 /* ============================================================
-   Motion — added July 2026
+   Motion layer
    All effects collapse under prefers-reduced-motion.
    ============================================================ */
-
-body{transition:background-color .6s ease}
-
-/* nav gains weight after scroll */
-nav{transition:box-shadow .25s ease,background-color .25s ease}
-nav.scrolled{background:rgba(250,250,248,.85);backdrop-filter:saturate(160%) blur(10px);box-shadow:0 1px 0 var(--rule)}
-
-/* reveal on scroll */
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)}
-.reveal.in{opacity:1;transform:none}
-
-/* hero headline word stagger */
-h1 .w{display:inline-block;opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.22,.61,.36,1)}
-h1.lit .w{opacity:1;transform:none}
-/* marker sweep behind the blue phrase */
-h1 em{position:relative;display:inline-block}
-h1 em::before{content:"";position:absolute;left:-.06em;right:-.06em;top:.12em;bottom:.12em;background:var(--tint);transform:scaleX(0);transform-origin:left center;z-index:-1;border-radius:3px;transition:transform .75s cubic-bezier(.22,.61,.36,1) .6s}
-h1.lit em::before{transform:scaleX(1)}
-
-/* card image zoom on hover */
-.card-thumb{transition:transform .45s cubic-bezier(.22,.61,.36,1)}
-.card{overflow:hidden}
-.card:hover .card-thumb,.card:focus-visible .card-thumb{transform:scale(1.03)}
-
-/* flagship brand tiles drift */
-@keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
-.brandtile{animation:drift 5s ease-in-out infinite}
-.brandtile:nth-child(2){animation-duration:6.2s;animation-delay:-1.4s}
-.brandtile:nth-child(3){animation-duration:4.6s;animation-delay:-2.6s}
-.brandtile:nth-child(4){animation-duration:5.8s;animation-delay:-.7s}
-.brandtile:nth-child(5){animation-duration:6.6s;animation-delay:-3.1s}
-.brandtile:nth-child(6){animation-duration:5.2s;animation-delay:-1.9s}
-.flag-vis:hover .brandtile{animation-play-state:paused}
-
-/* bigger next-case-study arrow */
-.next .arrow{font-family:var(--mono);font-size:38px;line-height:1;color:var(--mid);transition:transform .3s cubic-bezier(.22,.61,.36,1)}
-.next:hover .arrow{transform:translateX(8px)}
-
-@media (prefers-reduced-motion:reduce){
-  .reveal,.reveal.in{opacity:1;transform:none;transition:none}
-  h1 .w{opacity:1;transform:none}
-  h1 em::before{transform:scaleX(1);transition:none}
-  .brandtile{animation:none}
-  body{transition:none}
-  .card:hover .card-thumb{transform:none}
-}
-
-/* ============================================================
-   Motion layer
-   ============================================================ */
-body{background:var(--page-bg,var(--paper));transition:background-color .6s ease}
+body{background:var(--page-bg,var(--paper));transition:background-color 1.1s cubic-bezier(.4,0,.2,1)}
 .about{background:transparent}
 
 /* reveals */
