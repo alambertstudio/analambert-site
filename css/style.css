@@ -48,10 +48,9 @@ nav{position:sticky;top:0;background:var(--paper);border-bottom:1px solid var(--
   .nav-links{position:fixed;top:64px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--rule);
     flex-direction:column;align-items:stretch;gap:0;padding:8px 24px 20px;
     max-height:0;overflow:hidden;opacity:0;transition:max-height .3s ease,opacity .25s ease;}
-  .nav-links.open{max-height:260px;opacity:1}
-  .nav-links a{padding:14px 0;border-bottom:1px solid var(--rule);font-size:16px}
-  .nav-links a:last-child{border-bottom:none}
-  .nav-cta{margin-top:12px;text-align:center;padding:12px 14px}
+  .nav-links.open{max-height:360px;opacity:1;overflow-y:auto}
+  .nav-links a:not(.nav-cta){padding:14px 0;border-bottom:1px solid var(--rule);font-size:16px}
+  .nav-links .nav-cta{display:block;width:100%;margin-top:12px;text-align:center;padding:12px 14px;border-bottom:none;box-sizing:border-box}
 }
 
 /* ---------- hero ---------- */
@@ -125,6 +124,8 @@ h3{font-family:var(--disp);font-weight:750;font-stretch:108%;font-size:19.5px;li
 /* ---------- cta + footer ---------- */
 .cta{padding:96px 0}
 .cta h2{max-width:18ch}
+.cta.cta-dark{background:var(--navy);color:#fff}
+.cta.cta-dark h2{color:#fff}
 .cta-btn{display:inline-flex;align-items:center;gap:10px;margin-top:28px;background:var(--blue);color:#fff;text-decoration:none;font-weight:600;font-size:15.5px;padding:15px 26px;border-radius:100px;transition:background .15s ease}
 .cta-btn:hover{background:var(--blue-deep)}
 footer{border-top:1px solid var(--rule);padding:28px 0;font-family:var(--mono);font-size:12px;color:#6a6a74}
