@@ -100,15 +100,16 @@ h3{font-family:var(--disp);font-weight:750;font-stretch:108%;font-size:19.5px;li
 .go{margin-top:auto;font-family:var(--mono);font-size:12px;color:var(--blue);padding-top:6px}
 
 /* ---------- flagship card ---------- */
-.flag{margin-top:24px;background:var(--blue);border-radius:16px;color:#fff;display:grid;grid-template-columns:1.1fr .9fr;overflow:hidden;text-decoration:none;transition:transform .18s ease}
-.flag:hover{transform:translateY(-4px)}
+.flag{margin-top:24px;background:var(--blue);border-radius:16px;color:#fff;display:grid;grid-template-columns:1.1fr .9fr;overflow:hidden;text-decoration:none;transition:transform .28s cubic-bezier(.2,.7,.3,1),box-shadow .28s cubic-bezier(.2,.7,.3,1)}
+.flag:hover,.flag:focus-visible{transform:translateY(-8px);box-shadow:0 26px 54px rgba(10,10,92,.38)}
+.flag:hover .flag-vis{background:var(--blue-deep)}
 @media(max-width:900px){.flag{grid-template-columns:1fr}}
 .flag-txt{padding:40px 44px}
 .flag-k{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);margin-bottom:14px}
 .flag h3{color:#fff;font-size:clamp(22px,3vw,30px);max-width:20ch}
 .flag p{margin-top:12px;font-size:15.5px;color:#E6FAF5;max-width:46ch}
 .flag .go{color:#fff}
-.flag-vis{background:var(--navy);padding:36px;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+.flag-vis{background:var(--navy);padding:36px;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;transition:background .28s ease}
 .brandtile{width:74px;height:74px;border-radius:12px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-weight:850;font-size:13px;color:#fff}
 .brandtile.lit{background:#fff;color:var(--blue)}
 
