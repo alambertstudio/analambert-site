@@ -122,13 +122,14 @@ h3{font-family:var(--disp);font-weight:750;font-stretch:108%;font-size:19.5px;li
 .photo{aspect-ratio:4/5;border-radius:14px;object-fit:cover}
 
 /* ---------- cta + footer ---------- */
-.cta{padding:96px 0}
+.cta{padding:96px 0;background:var(--tint-deep)}
 .cta h2{max-width:18ch}
-.cta.cta-dark{background:var(--navy);color:#fff}
-.cta.cta-dark h2{color:#fff}
 .cta-btn{display:inline-flex;align-items:center;gap:10px;margin-top:28px;background:var(--blue);color:#fff;text-decoration:none;font-weight:600;font-size:15.5px;padding:15px 26px;border-radius:100px;transition:background .15s ease}
 .cta-btn:hover{background:var(--blue-deep)}
 footer{border-top:1px solid var(--rule);padding:28px 0;font-family:var(--mono);font-size:12px;color:#6a6a74}
+footer.foot-mint{background:var(--tint-deep);border-top:none}
+footer.foot-mint,footer.foot-mint a{color:#4A4A55}
+footer.foot-mint a:hover{color:var(--blue-deep)}
 .foot-in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 footer a{color:#6a6a74}
 footer a:hover{color:var(--blue)}
