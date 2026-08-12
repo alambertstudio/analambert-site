@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/hero.css">
 </head>
 <body>
 
@@ -24,17 +25,33 @@
   </div>
 </div></nav>
 
-<header class="site-hero" data-bg="#FAFAF8"><div class="wrap hero">
-  <div class="kicker">Creative Direction · Brand · Campaigns · Digital</div>
-  <h1>Creative work that <em>holds together</em> at scale.</h1>
-  <p class="hero-sub">I'm Ana Ortega Lambert, a creative director working across brand identity, integrated campaigns, and digital experiences. I've led creative for a portfolio of <b>10+ brands across 40+ country markets</b>, I still design hands-on, and I build the systems that let strong work stay strong once it leaves my hands.</p>
-  <div class="tokens" aria-hidden="true">
-    <div class="token"><span class="swatch"></span> brand.blue · #1A1AE6</div>
-    <div class="token"><span class="swatch ink"></span> ink · #0B0B14</div>
-    <div class="token"><span class="aa">Aa</span> Archivo / Instrument</div>
-    <div class="token"><span class="swatch tint"></span> system · in use below</div>
+<header class="hero-b" id="hero" data-bg="#0A0A5C">
+  <div class="hb-field" aria-hidden="true"><span class="b1"></span><span class="b2"></span><span class="b3"></span></div>
+  <div class="wrap">
+    <p class="hb-eyebrow hb-up hb-d1"><span class="hb-dot"></span>Ana Ortega Lambert · Creative Director</p>
+
+    <h1 class="hb-up hb-d2">Creative work that <em>holds together</em> at scale.</h1>
+
+    <p class="hb-line hb-up hb-d3">
+      So ask me about your
+      <span class="rot" id="rot" aria-hidden="true">
+        <span class="brk">[</span>
+        <span class="rot-track" id="rotTrack"></span>
+        <span class="brk">]</span>
+      </span>
+      <span class="hb-sr" id="rotSr"></span>
+    </p>
+
+    <ul class="hb-areas hb-up hb-d4" id="areas" aria-label="Areas I work in"></ul>
+
+    <p class="hb-sub hb-up hb-d4">Creative direction, mainly for public health brands running in 40+ country markets, where work that gets ignored has a real cost. I have built the brand systems, run the campaigns, designed the sites and written the strategy, so I can lead specialists in any of them and tell you early which one your problem actually needs.</p>
+
+    <div class="hb-actions hb-up hb-d5">
+      <a class="hb-cta" href="#work">See the work <span class="arw">&rarr;</span></a>
+      <a class="hb-ghost" href="mailto:analinet.ortega@gmail.com">Get in touch</a>
+    </div>
   </div>
-</div></header>
+</header>
 
 <div class="strip" data-bg="#FAFAF8"><div class="wrap strip-in">
   <div class="stat"><div class="n">10<span>+</span></div><div class="l">Brands directed</div></div>
@@ -114,5 +131,6 @@
 </div></footer>
 
 <script src="js/motion.js" defer></script>
+<script src="js/hero.js" defer></script>
 </body>
 </html>
