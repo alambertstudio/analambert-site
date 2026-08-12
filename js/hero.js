@@ -8,7 +8,14 @@
    To change the pace, edit HOLD. Below 2000 it starts to feel twitchy.
 */
 (function () {
-  var AREAS = ['brand', 'campaign', 'creative strategy', 'website', 'design system'];
+  /* label = word in the brackets and on the pill, href = case study it opens */
+  var AREAS = [
+    { label: 'brand system',      href: 'work/brand-system.html' },
+    { label: 'website',           href: 'work/psi-homepage.html' },
+    { label: 'ui design',         href: 'work/safebag-app.html' },
+    { label: 'campaign',          href: 'work/school-survey.html' },
+    { label: 'creative strategy', href: 'work/brand-system.html' }
+  ];
   var HOLD = 2600;
 
   var rot = document.getElementById('rot');
@@ -18,25 +25,28 @@
   if (!rot || !track || !areasEl || !srEl) return;
 
   /* the animated line is aria-hidden, so screen readers get the full list */
-  srEl.textContent = 'So ask me about your ' + AREAS.join(', ') + '.';
+  srEl.textContent = AREAS.map(function (a) { return a.label; }).join(', ') + '.';
 
-  var words = AREAS.map(function (label) {
+  var words = AREAS.map(function (a) {
     var el = document.createElement('span');
     el.className = 'rot-word';
-    el.textContent = label;
+    el.textContent = a.label;
     track.appendChild(el);
     return el;
   });
 
-  var pills = AREAS.map(function (label, i) {
+  /* pills are real links to the case studies. Hovering one previews it in the
+     brackets, clicking one opens the work. */
+  var pills = AREAS.map(function (a, i) {
     var li = document.createElement('li');
-    var b = document.createElement('button');
-    b.type = 'button';
-    b.textContent = label;
-    b.addEventListener('click', function () { stop(); show(i); });
-    li.appendChild(b);
+    var link = document.createElement('a');
+    link.href = a.href;
+    link.textContent = a.label;
+    link.addEventListener('mouseenter', function () { stop(); jump(i); });
+    link.addEventListener('focus', function () { stop(); jump(i); });
+    li.appendChild(link);
     areasEl.appendChild(li);
-    return b;
+    return link;
   });
 
   /* measured with the real rendered font so the brackets land exactly */
@@ -54,14 +64,15 @@
     ghost.style.fontStyle = cs.fontStyle;
     ghost.style.fontStretch = cs.fontStretch;
     ghost.style.letterSpacing = cs.letterSpacing;
-    widths = AREAS.map(function (label) {
-      ghost.textContent = label;
+    widths = AREAS.map(function (a) {
+      ghost.textContent = a.label;
       return ghost.offsetWidth;
     });
     track.style.width = widths[current] + 'px';
   }
 
-  function show(i) {
+  function jump(i) {
+    if (i === current) return;
     words[current].classList.remove('in');
     words[current].classList.add('out');
     pills[current].removeAttribute('aria-current');
@@ -72,6 +83,10 @@
     words[current].classList.remove('out');
     words[current].classList.add('in');
     pills[current].setAttribute('aria-current', 'true');
+  }
+
+  function show(i) {
+    jump(i);
     start();
   }
 
