@@ -11,9 +11,9 @@
   /* label = word in the brackets and on the pill, href = case study it opens */
   var AREAS = [
     { label: 'brand system',      href: 'work/brand-system.html' },
-    { label: 'website',           href: 'work/psi-homepage.html' },
-    { label: 'ui design',         href: 'work/safebag-app.html' },
-    { label: 'campaign',          href: 'work/school-survey.html' },
+    { label: 'digital brand',     href: 'work/psi-homepage.html' },
+    { label: 'ux/ui design',      href: 'work/safebag-app.html' },
+    { label: 'web design',        href: 'work/school-survey.html' },
     { label: 'creative strategy', href: 'work/brand-system.html' }
   ];
   var HOLD = 2600;
