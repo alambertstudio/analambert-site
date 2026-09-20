@@ -58,12 +58,12 @@
   font-size:clamp(32px,4.5vw,58px);line-height:1.04;letter-spacing:-.025em;
   color:var(--paper);max-width:25ch;margin-bottom:30px;
 }
-/* the second sentence starts its own line, and "Ask me about" stays glued to
-   the brackets so the rotating word can never fall to the line below */
+/* the rotator starts its own line under the headline sentence.
+   .rot itself is already white-space:nowrap, so the brackets and the
+   word can never split across lines. */
 .hero-b h1 .hb-break{display:none}
 @media (min-width:901px){
   .hero-b h1 .hb-break{display:block}
-  .hero-b h1 .hb-ask{white-space:nowrap}
 }
 
 /* teal emphasis, and no mint sweep behind it on the dark ground */

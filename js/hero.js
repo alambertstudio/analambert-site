@@ -25,7 +25,7 @@
   if (!rot || !track || !areasEl || !srEl) return;
 
   /* the animated line is aria-hidden, so screen readers get the full list */
-  srEl.textContent = AREAS.map(function (a) { return a.label; }).join(', ') + '.';
+  srEl.textContent = 'I work across ' + AREAS.map(function (a) { return a.label; }).join(', ') + '.';
 
   var words = AREAS.map(function (a) {
     var el = document.createElement('span');
