@@ -99,7 +99,7 @@
 .rot-measure{position:absolute;visibility:hidden;white-space:nowrap;pointer-events:none;top:-9999px;left:-9999px}
 
 /* ---------- areas row ---------- */
-.hero-b .hb-areas{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px;list-style:none}
+.hero-b .hb-areas{display:flex;flex-wrap:wrap;gap:8px;list-style:none}
 .hero-b .hb-areas li{margin:0}
 .hero-b .hb-areas a{
   display:inline-flex;align-items:center;gap:0;
@@ -121,36 +121,13 @@
 .hero-b .hb-areas a[aria-current="true"]{
   background:rgba(127,223,204,.16);border-color:var(--mid);color:var(--paper);
 }
-.hero-b .hb-areas a:focus-visible,
-.hero-b .hb-cta:focus-visible,
-.hero-b .hb-ghost:focus-visible{outline:2px solid var(--mid);outline-offset:3px}
-
-/* ---------- support copy and actions ---------- */
-.hero-b .hb-actions{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
-.hero-b .hb-cta{
-  display:inline-flex;align-items:center;gap:10px;
-  font-family:var(--body);font-weight:600;font-size:15px;
-  background:var(--mid);color:var(--navy);text-decoration:none;
-  padding:14px 24px;border-radius:14px;
-  transition:background .25s ease,transform .25s ease;
-}
-.hero-b .hb-cta:hover{background:var(--tint-deep);transform:translateY(-2px)}
-.hero-b .hb-cta .arw{transition:transform .25s ease}
-.hero-b .hb-cta:hover .arw{transform:translateX(4px)}
-.hero-b .hb-ghost{
-  font-family:var(--body);font-weight:500;font-size:15px;
-  color:var(--tint);text-decoration:none;
-  border-bottom:1px solid rgba(227,246,242,.35);padding-bottom:2px;
-}
-.hero-b .hb-ghost:hover{color:var(--mid);border-color:var(--mid)}
+.hero-b .hb-areas a:focus-visible{outline:2px solid var(--mid);outline-offset:3px}
 
 /* ---------- entrance stagger ---------- */
 .hero-b .hb-up{opacity:0;transform:translateY(18px);animation:hbUp .8s cubic-bezier(.2,.7,.3,1) forwards}
 .hero-b .hb-d1{animation-delay:.06s}
 .hero-b .hb-d2{animation-delay:.18s}
 .hero-b .hb-d3{animation-delay:.30s}
-.hero-b .hb-d4{animation-delay:.42s}
-.hero-b .hb-d5{animation-delay:.54s}
 @keyframes hbUp{to{opacity:1;transform:none}}
 
 .hb-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
