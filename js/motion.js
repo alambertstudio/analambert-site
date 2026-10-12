@@ -105,4 +105,13 @@
       if (window.innerWidth > 640) setOpen(false);
     });
   }
+
+  /* ---- 7. looping case study videos: stop autoplay, offer controls ---- */
+  if (reduce) {
+    document.querySelectorAll('video[autoplay]').forEach(function (v) {
+      v.removeAttribute('autoplay');
+      v.pause();
+      v.controls = true;
+    });
+  }
 })();
