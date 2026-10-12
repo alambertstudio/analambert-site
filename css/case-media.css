@@ -121,3 +121,26 @@ html { overflow-x: clip; }
   margin-bottom: 8px;
   font-weight: 500;
 }
+
+/* ---------- hero variant for cut-out mockups: show the whole image ---------- */
+.csm-hero--contain img {
+  object-fit: contain;
+  height: auto;
+  max-height: 620px;
+  padding: 28px 24px 8px;
+  box-sizing: border-box;
+}
+@media (max-width: 700px) {
+  .csm-hero--contain img { max-height: 420px; padding: 18px 16px 4px; }
+}
+
+/* ---------- figures with width/height attributes keep their ratio ---------- */
+.cs-fig img { height: auto; }
+
+/* ---------- looping video figures ---------- */
+.cs-fig video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
