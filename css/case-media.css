@@ -144,3 +144,48 @@ html { overflow-x: clip; }
   height: auto;
   border-radius: 12px;
 }
+
+/* ---------- positioning line under the case study title ---------- */
+.cs-lede {
+  font-size: clamp(17px, 1.6vw, 20px);
+  line-height: 1.5;
+  color: #3a3a45;
+  max-width: 62ch;
+  margin-top: 18px;
+}
+
+/* ---------- small linked teaser to another case study ---------- */
+.csm-teaser {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 22px;
+  align-items: center;
+  margin: 36px 0;
+  padding: 16px;
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--ink);
+  text-decoration: none;
+  transition: border-color .18s ease;
+}
+.csm-teaser:hover { border-color: var(--blue); }
+.csm-teaser img { width: 100%; height: auto; border-radius: 8px; }
+.csm-teaser-k {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--blue-deep);
+}
+.csm-teaser-t {
+  font-family: var(--disp);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.3;
+  margin: 6px 0 10px;
+}
+.csm-teaser-go { font-size: 14px; color: var(--blue); }
+@media (max-width: 560px) {
+  .csm-teaser { grid-template-columns: 1fr; }
+}
