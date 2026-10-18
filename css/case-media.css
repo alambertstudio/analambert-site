@@ -189,3 +189,24 @@ html { overflow-x: clip; }
 @media (max-width: 560px) {
   .csm-teaser { grid-template-columns: 1fr; }
 }
+
+/* ---------- text beside a supporting image, inside the reading column ---------- */
+.csm-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+  margin: 0 0 8px;
+}
+.csm-split p { margin: 0; }
+.csm-split figure { margin: 0; }
+.csm-split img { width: 100%; height: auto; display: block; }
+.csm-split figcaption {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: #6a6a74;
+  margin-top: 10px;
+}
+@media (max-width: 700px) {
+  .csm-split { grid-template-columns: 1fr; gap: 20px; }
+}
