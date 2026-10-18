@@ -71,6 +71,24 @@ html { overflow-x: clip; }
   .csm-pair { grid-template-columns: 1fr; gap: 26px; }
 }
 
+/* ---------- text left, image right, broken out of the reading column ----------
+   Use with .csm-wide for the breakout width. Stacks text over image on mobile. */
+.csm-split {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 56px;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.csm-split-text h3 { margin-top: 0; }
+.csm-split-text p:last-child { margin-bottom: 0; }
+.csm-split .cs-fig { margin: 0; }
+.csm-split .cs-fig img { width: 100%; display: block; }
+@media (max-width: 900px) {
+  .csm-split { grid-template-columns: 1fr; gap: 28px; }
+}
+
 /* ---------- compact results row, replaces a paragraph of numbers ---------- */
 .csm-stats {
   display: grid;
