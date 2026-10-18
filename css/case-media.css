@@ -89,6 +89,26 @@ html { overflow-x: clip; }
   .csm-split { grid-template-columns: 1fr; gap: 28px; }
 }
 
+/* Panel variant: text and image share one background.
+   The color matches the backdrop baked into brand-system-voice.jpg
+   (#ece9e4 at top fading to #e6e3de), so the image edge disappears. */
+.csm-split--panel {
+  background: linear-gradient(180deg, #ece9e4 0%, #e6e3de calc(100% - 40px), #e6e3de 100%);
+  border-radius: 12px;
+  padding: 0;
+  overflow: hidden;
+  gap: 0;
+}
+.csm-split--panel .csm-split-text { padding: 56px 0 56px 56px; }
+.csm-split--panel .cs-fig img { border-radius: 0; }
+.csm-split--panel .cs-fig figcaption { padding: 0 32px 20px; margin-top: 0; }
+@media (max-width: 900px) {
+  /* stacked: text sits above the image, so match the image's top and bottom tones */
+  .csm-split--panel { background: #e6e3de; }
+  .csm-split--panel .csm-split-text { padding: 32px 24px 8px; background: #ece9e4; }
+  .csm-split--panel .cs-fig figcaption { padding: 0 24px 18px; }
+}
+
 /* ---------- compact results row, replaces a paragraph of numbers ---------- */
 .csm-stats {
   display: grid;
