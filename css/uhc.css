@@ -1,0 +1,78 @@
+/* ============================================================
+   12 Days of UHC case study
+   Additive. Load AFTER style.css, related.css and case-media.css.
+   All classes prefixed uhc-. Campaign colors are scoped here so
+   they never leak into the site palette.
+   ============================================================ */
+.uhc-page{
+  --uhc-teal:#53C0BA;
+  --uhc-deep:#116162;
+  --uhc-lime:#C1FF72;
+  --uhc-line:rgba(11,11,20,.12);
+}
+
+/* intro line under the H1 */
+.uhc-lede{font-size:clamp(18px,2vw,21px);line-height:1.5;max-width:62ch;margin-top:20px;color:#2e2e38}
+
+/* cover: show the whole 2:1 image, never crop it */
+.uhc-cover img{max-width:1200px;max-height:none;aspect-ratio:2/1;margin:0 auto}
+.uhc-cover figcaption{text-align:left}
+
+/* results row */
+.uhc-results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:56px;border-top:2px solid var(--ink);border-bottom:1px solid var(--uhc-line)}
+.uhc-stat{padding:26px 24px 26px 0}
+.uhc-stat+.uhc-stat{padding-left:24px;border-left:1px solid var(--uhc-line)}
+.uhc-num{font-family:var(--disp);font-weight:800;font-size:clamp(38px,5.5vw,60px);line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.uhc-delta{display:inline-block;margin-left:10px;font-family:var(--mono);font-size:13px;font-weight:500;color:var(--uhc-deep);background:var(--uhc-lime);padding:3px 8px;border-radius:3px;vertical-align:middle;letter-spacing:0}
+.uhc-k{font-family:var(--mono);font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:#5a5a66}
+.uhc-stat .uhc-k{margin-top:10px}
+@media(max-width:640px){
+  .uhc-results{grid-template-columns:1fr}
+  .uhc-stat+.uhc-stat{padding-left:0;border-left:0;border-top:1px solid var(--uhc-line)}
+}
+
+/* section shell for full-width sections between the reading columns */
+.uhc-sec{padding-top:72px}
+.uhc-sec h2{font-size:clamp(24px,3vw,32px);margin-bottom:16px}
+.uhc-sec p{color:#2e2e38;margin-bottom:16px;max-width:62ch}
+.uhc-label{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+
+/* identity */
+.uhc-ident{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.uhc-ident p{margin-bottom:16px;color:#2e2e38}
+.uhc-ident h2{font-size:clamp(24px,3vw,32px);margin-bottom:16px}
+.uhc-ident img{width:100%;border-radius:6px;display:block}
+.uhc-swatches{display:flex;flex-wrap:wrap;gap:14px;margin-top:20px}
+.uhc-sw{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px}
+.uhc-sw i{width:22px;height:22px;border-radius:50%;display:block;border:1px solid var(--uhc-line)}
+@media(max-width:760px){.uhc-ident{grid-template-columns:1fr;gap:24px}}
+
+/* campaign at a glance */
+.uhc-glance{display:flex;flex-wrap:wrap;gap:12px 40px;margin-top:28px;padding:20px 0;border-top:1px solid var(--uhc-line);border-bottom:1px solid var(--uhc-line)}
+.uhc-glance div{display:flex;align-items:baseline;gap:10px}
+.uhc-glance b{font-family:var(--disp);font-weight:800;font-size:36px;line-height:1;font-variant-numeric:tabular-nums}
+.uhc-types{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:28px}
+.uhc-types figure{margin:0}
+.uhc-types img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:4px;display:block}
+.uhc-types figcaption{font-family:var(--mono);font-size:12px;color:#6a6a74;margin-top:8px}
+@media(max-width:700px){.uhc-types{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.uhc-tops{display:flex;flex-wrap:wrap;gap:16px 48px;margin-top:28px}
+.uhc-tops p{margin:8px 0 0;font-weight:500;color:var(--ink)}
+.uhc-badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;letter-spacing:.03em;background:var(--uhc-deep);color:#fff;padding:6px 10px;border-radius:3px}
+.uhc-badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--uhc-lime)}
+
+/* video band */
+.uhc-vband{background:var(--tint);margin-top:88px;padding:64px 0}
+.uhc-vband h3{font-family:var(--disp);font-weight:750;font-size:24px;margin-bottom:12px}
+.uhc-vband p{color:#2e2e38;max-width:62ch}
+.uhc-vids{display:flex;flex-wrap:wrap;gap:20px;margin-top:24px}
+.uhc-vids figure{margin:0;width:180px;max-width:100%}
+.uhc-vids img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:6px;display:block}
+.uhc-vids figcaption{font-family:var(--mono);font-size:12px;color:#4a4a55;margin-top:8px;line-height:1.45}
+.uhc-vt{display:block;color:var(--blue);text-transform:uppercase;letter-spacing:.08em;font-size:11px;margin-bottom:2px}
+@media(max-width:560px){.uhc-vids figure{width:calc(33.333% - 14px)}}
+
+/* team credits */
+.uhc-team{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 32px;margin-top:28px;padding-top:24px;border-top:1px solid var(--uhc-line)}
+.uhc-team .v{margin-top:4px;font-weight:500}
+@media(max-width:560px){.uhc-team{grid-template-columns:1fr}}
