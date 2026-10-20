@@ -93,31 +93,6 @@
   margin: 10px 0 36px;
 }
 
-/* ---------- numbered decisions ---------- */
-.sb-decisions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  margin: 28px 0 36px;
-}
-.sb-decision {
-  background: #fff;
-  border: 1px solid var(--rule);
-  border-radius: 12px;
-  padding: 22px 22px 20px;
-}
-.sb-decision .sb-n {
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--blue);
-  letter-spacing: .06em;
-}
-.sb-decision h3 { margin: 6px 0 8px; font-size: 19px; line-height: 1.25; }
-.sb-decision p { margin: 0; font-size: 15.5px; line-height: 1.55; color: #33333d; }
-@media (max-width: 700px) {
-  .sb-decisions { grid-template-columns: 1fr; }
-}
-
 .sb-shot {
   background: var(--sb-bg);
   border-radius: 12px;

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SafeBag App — Ana Ortega Lambert</title>
-<meta name="description" content="Redesigning a self-service luggage locker app end to end: reserve a locker, unlock it with your phone, and pick up without ever talking to staff.">
+<title>SafeBag App · Ana Ortega Lambert</title>
+<meta name="description" content="Designing a self-service luggage locker app from start to finish: reserve a locker, open it with your phone, and pick up without talking to anyone.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
@@ -27,103 +27,94 @@
 </div></nav>
 
 <header class="cs-hero" data-bg="#FAFAF8"><div class="wrap">
-  <div class="kicker">Product design · Self-service luggage lockers</div>
+  <div class="kicker">Product · Mobile app · Design lead</div>
   <h1>Reducing booking friction for on-the-go luggage storage</h1>
-  <p class="sb-lede">SafeBag lets travelers reserve a locker, unlock it with their phone, and explore the city without their bags. There is no counter and no staff on site, so the app is the whole service. I designed it end to end, then came back and redesigned it.</p>
+  <p class="sb-lede">SafeBag lets travelers reserve a locker, open it with their phone, and explore the city without their bags. There is no counter and no staff, so the app is the whole service. I designed it from start to finish, then went back and redesigned it.</p>
   <div class="cs-meta">
-    <div><div class="k">Role</div><div class="v">Solo designer, end to end</div></div>
-    <div><div class="k">Service</div><div class="v">Self-service smart lockers, no staff on site</div></div>
-    <div><div class="k">Scope</div><div class="v">Search to pickup, 9 screens plus edge states</div></div>
-    <div><div class="k">Tools</div><div class="v">Figma, prototyping, logo art direction</div></div>
+    <div><div class="k">Role</div><div class="v">Design lead: experience, interface and logo</div></div>
+    <div><div class="k">Context</div><div class="v">Self-service lockers, no staff on site</div></div>
+    <div><div class="k">Tools</div><div class="v">Figma</div></div>
+    <div><div class="k">Outcome</div><div class="v">The full journey redesigned, from search to pickup</div></div>
   </div>
 </div></header>
 
 <figure class="sb-hero">
   <img src="../images/safebag-hero.jpg" width="2400" height="1100" alt="Nine SafeBag app screens in phone frames: search, map results, locker size, checkout, reserved locker, unlocking at the locker, active booking, running late, and pickup">
-  <figcaption>Version 2. Reserve, unlock, explore, pick up. Designed for someone standing on a street with a suitcase.</figcaption>
+  <figcaption>Designed for someone standing on a street with a suitcase.</figcaption>
 </figure>
 
 <article class="cs-body">
-  <h2>The problem</h2>
-  <p>Travelers want to drop their bags and see the city. With a self-service locker, there is nobody to ask. The user is somewhere unfamiliar, short on time, and about to leave their belongings in a machine. Every question a staff member would normally answer, like which locker, is it really locked, what if I'm late, has to be answered on the screen.</p>
+  <h2>The challenge</h2>
+  <p>Travelers want to drop their bags and see the city. With a self-service locker, there is nobody to ask. They are somewhere new, short on time, and about to leave their belongings in a machine.</p>
+  <p>Every question a staff member would normally answer has to be answered on the screen: which locker is mine, is it really locked, what happens if I'm late.</p>
 
   <div class="pull reveal">With no one at the counter, the app has to do the reassuring.</div>
 
-  <h2>Where version 1 fell short</h2>
-  <p>I designed the first version solo: user flows, visual direction, the UI system and the logo. Looking at it again, I found problems I would flag in anyone else's work.</p>
+  <h2>A second look</h2>
+  <p>I designed the first version on my own: the flow, the look and the logo. Coming back to it later, I found problems I would point out in anyone else's work.</p>
 
   <div class="csm-split sb-panel csm-wide">
     <div class="csm-split-text">
       <ul class="sb-list">
-        <li><b>A login wall right before payment.</b>The worst place to ask someone to create an account.</li>
-        <li><b>Pricing that didn't add up.</b>Three different rates across screens, and checkout math that didn't match the total.</li>
-        <li><b>Dates entered twice.</b>Check-in and check-out were blank again at checkout.</li>
-        <li><b>The flow stopped at login.</b>It never reached the locker, the unlock, or pickup, the moments that matter most.</li>
+        <li><b>It asked people to sign up right before paying.</b>The worst moment to ask for anything extra.</li>
+        <li><b>The prices didn't match.</b>Different rates on different screens, and a total that didn't add up.</li>
+        <li><b>People typed their dates twice.</b>What they entered at the start was gone by checkout.</li>
+        <li><b>It ended at payment.</b>It never got to the locker, the unlock or the pickup, the moments that matter most.</li>
       </ul>
     </div>
     <figure class="cs-fig reveal">
-      <img src="../images/safebag-before-after.jpg" width="1004" height="1053" alt="Version 1 checkout with a login-to-pay button and inconsistent prices, next to the version 2 review and pay screen with a clear price breakdown and Apple Pay" loading="lazy">
-      <figcaption>Checkout, before and after.</figcaption>
+      <img src="../images/safebag-before-after.jpg" width="1004" height="1053" alt="Version 1 checkout with a log in to pay button and mismatched prices, next to the version 2 checkout with a clear total and Apple Pay" loading="lazy">
+      <figcaption>Checkout before and after. One clear price, and no account needed to pay.</figcaption>
     </figure>
   </div>
 
-  <h2>The redesign</h2>
-  <p>Version 2 covers the full journey, from search to the moment the locker is released, including what happens when things don't go to plan.</p>
+  <p>Version 2 covers the whole trip, from search to the moment the locker is released, including what happens when plans change.</p>
 </article>
 
 <div class="wrap">
   <div class="sb-flow reveal">
     <img src="../images/safebag-flow.jpg" width="3200" height="845" alt="All nine version 2 screens in order: search, map results, location and locker size, review and pay, locker reserved, at the locker, active booking, running late, picked up" loading="lazy">
   </div>
-  <p class="sb-flow-note">The full flow, 01 to 09. Scroll sideways on mobile.</p>
+  <p class="sb-flow-note">The full journey, from search to pickup.</p>
 </div>
 
 <article class="cs-body">
-  <h2>Key decisions</h2>
-  <div class="sb-decisions">
-    <div class="sb-decision reveal">
-      <div class="sb-n">01</div>
-      <h3>Ask for bags, not locker sizes</h3>
-      <p>Nobody knows if their suitcase fits a "Medium." Users enter how many bags they have, and the app recommends the size. They confirm a choice instead of guessing one.</p>
-    </div>
-    <div class="sb-decision reveal">
-      <div class="sb-n">02</div>
-      <h3>Show the locker, not just a code</h3>
-      <p>The confirmation shows which locker is yours and where it sits in the bank: B14, middle row, fourth from the left. You walk up knowing where to look.</p>
-    </div>
-    <div class="sb-decision reveal">
-      <div class="sb-n">03</div>
-      <h3>Plan for the phone failing</h3>
-      <p>If the phone dies or Bluetooth drops, the bags can't be stuck inside. A backup PIN goes to the user's number at checkout and works on the locker keypad.</p>
-    </div>
-    <div class="sb-decision reveal">
-      <div class="sb-n">04</div>
-      <h3>Make running late free</h3>
-      <p>One price per locker, per day. Keeping the locker until midnight costs nothing, so the reminder before pickup is reassurance, not a warning.</p>
-    </div>
-  </div>
+  <h2>Design decisions</h2>
+
+  <h3>Ask for bags, not locker sizes</h3>
+  <p>Nobody knows whether their suitcase fits a "Medium." People say how many bags they have, and the app suggests the size. They confirm a choice instead of guessing one.</p>
+
+  <h3>Show the locker, not just a code</h3>
+  <p>The confirmation shows exactly which locker is yours and where it is: B14, middle row, fourth from the left. You walk up knowing where to look.</p>
+
+  <h3>Plan for the phone dying</h3>
+  <p>A dead battery can't be the reason someone's bags are stuck. Every booking comes with a backup code that opens the locker without the app.</p>
+
+  <h3>Make running late free</h3>
+  <p>People pay by the day, so keeping the locker until midnight costs nothing extra. The reminder before pickup reads as reassurance, not a warning.</p>
 
   <h2>The moment at the locker</h2>
-  <p>Unlocking a machine with your belongings inside is the point of highest anxiety, so I designed it as a short, visible sequence: arrived, unlocked, bags in, door closed. The door locks on its own and the timer starts. After that, one glance tells you when to come back.</p>
+  <p>Leaving your belongings in a machine is the most nervous part of the trip, so I turned it into a short sequence you can see: arrived, unlocked, bags in, door closed. After that, one look at the app tells you when to come back.</p>
 </article>
 
 <div class="wrap">
   <figure class="cs-fig sb-shot reveal" style="max-width:1000px;margin:36px auto">
-    <img src="../images/safebag-locker.jpg" width="1426" height="1053" alt="Three screens: locker B14 reserved with its position in the locker bank, the at-the-locker checklist with a backup PIN, and the active booking showing pickup by 6:00 PM" loading="lazy">
+    <img src="../images/safebag-locker.jpg" width="1426" height="1053" alt="Three screens: locker B14 reserved with its position in the locker bank, the at-the-locker steps with a backup code, and the active booking showing pickup by 6:00 PM" loading="lazy">
+    <figcaption>Reserved, opened, locked in. Each screen answers the one question people have at that moment.</figcaption>
   </figure>
 </div>
 
 <article class="cs-body">
-  <h2>The system</h2>
-  <p>Version 2 builds on the original style guide: the same brand colors, type and logo. I added reusable components for buttons and the status bar, and changed button text on cyan from white to dark navy, because white failed contrast standards.</p>
+  <h2>The identity</h2>
+  <p>Version 2 keeps the brand I built for the first version: the colors, the type and the logo. One change: button text on the bright blue went from white to dark, so it's readable in sunlight and meets accessibility standards.</p>
 
   <figure class="cs-fig full reveal">
     <img src="../images/safebag-style-guide.jpg" width="2336" height="1491" alt="SafeBag style guide: colors, type, buttons, and logo system" loading="lazy">
-    <figcaption>The original style guide that version 2 extends.</figcaption>
+    <figcaption>The SafeBag brand: colors, type and the logo across light and dark backgrounds.</figcaption>
   </figure>
 
   <h2>What I'd do next</h2>
-  <p>The redesign hasn't been tested with users yet. The next step is to watch travelers use it at a real locker bank, and to track booking completion, the time from arrival to a locked door, and how often the backup PIN gets used. That last number says whether the unlock flow works.</p>
+  <p>The redesign hasn't been tested with travelers yet. Next, I'd watch people use it at a real locker and see where they hesitate. The number I'd watch most is how often people need the backup code. That tells me whether opening the locker works.</p>
 </article>
 
 <a class="next" href="brand-system.html"><div class="wrap">
